@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset= "UTF-8"/>
+        <style>
+nav {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(234,127,51,.90),rgba(36,89,69,.96), rgba(20,122,168,.90),#147aa8);
+    padding: 14px 32px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+.nav-logo {
+    display: block;
+    margin: 0 auto 12px;
+    text-align: center;
+  }
+.nav-logo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    background: transparent;
+  }
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+.nav-links a {
+    color: #101010;
+    text-decoration: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    padding: 7px 14px;
+    border-radius: 999px;
+    transition: background 0.2s;
+  }
+.nav-links a:hover {
+    background: rgba(20, 122, 168, .22);
+    color: #147aa8;
+  }
+.nav-links a.active {
+    color:white
+}
+
+.WeOutside img {
+  width:100%;
+  height: auto;
+  object-fit:cover;
+  display:block;
+  overflow: hidden;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #101010;
+    background:
+        radial-gradient(circle at top left, rgba(20,122,168,0.18), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(234,127,51,0.16), transparent 28%),
+        linear-gradient(180deg, #f8fbfb 0%, #eef4ef 100%);
+}
+
+main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 24px 16px 40px;
+}
+
+.card {
+    background: #fffaf4;
+    border-radius: 26px;
+    box-shadow: 0 24px 64px rgba(16,16,16,0.14);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.75);
+    display: grid;
+    grid-template-columns: minmax(320px, .95fr) minmax(340px, 1.05fr);
+}
+
+.leftcolumn {
+    padding: 34px 28px;
+    color: #f8f8f6;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background:
+        linear-gradient(180deg, rgba(16,16,16,.98), rgba(36,89,69,.96)),
+        linear-gradient(145deg, rgba(20,122,168,.26), rgba(234,127,51,.18));
+}
+
+.leftcolumn h2 {
+    margin: 0 0 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #ffffff;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    line-height: 1.05;
+}
+
+.leftcolumn p {
+    color: rgba(248,248,246,.88);
+    line-height: 1.65;
+    margin: 0;
+}
+
+.sidebar-text-card {
+    padding: 16px;
+    border-radius: 20px;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.06)),
+        linear-gradient(135deg, rgba(20,122,168,.10), rgba(234,127,51,.06));
+    border: 1px solid rgba(255,255,255,.12);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+.sidebar-text-card p {
+    color: rgba(248,248,246,.88);
+    line-height: 1.65;
+    margin: 0 0 14px;
+}
+
+.sidebar-text-card p:last-child { margin-bottom: 0; }
+
+.sidebar-text-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.15rem;
+    color: #ffffff;
+    margin: 0 0 10px;
+}
+
+.rightcolumn {
+    padding: 32px 26px 28px;
+    background: #fffaf4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    align-content: start;
+}
+
+.rightcolumn h2 {
+    grid-column: 1 / -1;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: #101010;
+    margin: 0 0 4px;
+    line-height: 1.05;
+}
+
+.rightcolumn > p {
+    grid-column: 1 / -1;
+    color: #53616a;
+    line-height: 1.65;
+    margin: 0 0 8px;
+}
+
+.domain-card {
+    padding: 16px;
+    border-radius: 18px;
+    border: 1px solid rgba(16,16,16,.10);
+    background: #fffdfa;
+    transition: box-shadow 0.2s;
+}
+
+.domain-card:hover {
+    box-shadow: 0 8px 24px rgba(16,16,16,.10);
+}
+
+.domain-card strong {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: .95rem;
+    margin-bottom: 4px;
+    color: #101010;
+}
+
+.domain-card p {
+    margin: 0;
+    font-size: .85rem;
+    color: #53616a;
+    line-height: 1.6;
+}
+
+.domain-card a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: .78rem;
+    font-weight: 700;
+    color: #147aa8;
+    text-decoration: none;
+}
+
+.domain-card a:hover { text-decoration: underline; }
+
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-logo">
+        <img src="Transparent Logo.png">
+    </div>
+    <ul class="nav-links">
+        <li><a href="Index.html" class="active">Home</a></li>
+        <li><a href="Directory.html">Directory</a></li>
+        <li><a href="Contact.html">Get Involved</a></li>
+        <li><a href="Food.html">Food & Hospitality</a></li>
+        <li><a href="Beauty.html">Beauty & Care</a></li>
+        <li><a href="Retail.html">Retail & Makers</a></li>
+        <li><a href="Creative.html">Creative Economy</a></li>
+        <li><a href="Professional.html">Professional Services</a></li>
+        <li><a href="Wellness.html">Wellness & Healing</a></li>
+        <li><a href="Education.html">Education & Community</a></li>
+
+    </ul>
+</nav>
+
+<div class="WeOutside">
+  <img src="We Outside.png">
+</div>
+
+<main>
+    <div class="card">
+
+<div class="leftcolumn">
+
+    <div class="sidebar-text-card">
+        <p>Through We Outside, we map and analyze local ecosystems across seven interconnected domains. These are not ranks. They are distinct parts of the ecosystem that help communities function, circulate resources, and hold the work.</p>
+    </div>
+
+    <div class="sidebar-text-card">
+        <p><strong>A note on listings:</strong> Safe Space Strategies does not represent, endorse, or act on behalf of the businesses and organizations listed in this directory. Through the We Outside ecosystem mapping framework, we bring awareness of their existence to our communities in the spirit of building growing, lasting relationships across Baltimore & the DMV.</p>
+    </div>
+
+</div>
+        <div class="rightcolumn">
+            <h2>Explore the Ecosystem</h2>
+            <p>Find practitioners, businesses, and organizations already part of the DMV community ecosystem.</p>
+
+            <div class="domain-card">
+                <strong>Food & Hospitality</strong>
+                <p>Places that nourish, host, feed, and gather people.</p>
+                <a href="Food.html">Explore →</a>
+            </div>
+
+            <div class="domain-card">
+                <strong>Beauty & Personal Care</strong>
+                <p>Spaces of care, grooming, trust, and local relationship-building.</p>
+                <a href="Beauty.html">Explore →</a>
+            </div>
+
+            <div class="domain-card">
+                <strong>Retail & Makers</strong>
+                <p>Businesses and makers who produce, sell, and localize goods.</p>
+                <a href="Retail.html">Explore →</a>
+            </div>
+
+            <div class="domain-card">
+                <strong>Creative Economy</strong>
+                <p>Artists, storytellers, and cultural workers shaping identity and visibility.</p>
+                <a href="Creative.html">Explore →</a>
+            </div>
+
+            <div class="domain-card">
+                <strong>Professional Services</strong>
+                <p>Advisors, operators, and specialists providing technical and strategic support.</p>
+                <a href="Professional.html">Explore →</a>
+            </div>
+
+            <div class="domain-card">
+                <strong>Wellness & Healing</strong>
+                <p>Practitioners and spaces supporting restoration, healing, and human sustainability.</p>
+                <a href="Wellness.html">Explore →</a>
+            </div>
+
+            <div class="domain-card">
+                <strong>Education & Community Anchors</strong>
+                <p>Schools, faith spaces, organizers, and institutions that hold continuity and connection.</p>
+                <a href="Education.html">Explore →</a>
+            </div>
+
+            <div class="domain-card">
+                <strong>Browse the Full Directory</strong>
+                <p>See everyone across all domains in one place.</p>
+                <a href="Directory.html">View Directory →</a>
+            </div>
+
+        </div>
+    </div>
+</main>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset= "UTF-8"/>
+        <style>
+nav {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(234,127,51,.90),rgba(36,89,69,.96), rgba(20,122,168,.90),#147aa8);
+    padding: 14px 32px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+.nav-logo {
+    display: block;
+    margin: 0 auto 12px;
+    text-align: center;
+  }
+.nav-logo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    background: transparent;
+  }
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+.nav-links a {
+    color: #101010;
+    text-decoration: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    padding: 7px 14px;
+    border-radius: 999px;
+    transition: background 0.2s;
+  }
+.nav-links a:hover {
+    background: rgba(20, 122, 168, .22);
+    color: #147aa8;
+  }
+.nav-links a.active {
+    color:white
+}
+
+.domain-header {
+    padding: 32px 26px 0;
+    grid-column: 1 / -1;
+}
+
+.domain-header h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: #101010;
+    margin-bottom: 8px;
+}
+
+.domain-header p {
+    color: #53616a;
+    line-height: 1.65;
+    margin-bottom: 24px;
+}
+
+.listings-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 26px 32px;
+}
+
+.listing-card {
+    background: #fffdfa;
+    border-radius: 18px;
+    border: 1px solid rgba(16,16,16,.10);
+    padding: 20px;
+    transition: box-shadow 0.2s;
+}
+
+.listing-card:hover {
+    box-shadow: 0 8px 24px rgba(16,16,16,.10);
+}
+
+.listing-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    object-fit: contain;
+    background: #f0f0f0;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.listing-card h3 {
+    font-family: Georgia, serif;
+    font-size: 1.05rem;
+    color: #101010;
+    margin-bottom: 10px;
+}
+
+.listing-detail {
+    font-size: .85rem;
+    color: #53616a;
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+
+.listing-detail span {
+    font-weight: 600;
+    color: #101010;
+}
+
+.listing-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
+.listing-links a {
+    font-size: .78rem;
+    font-weight: 700;
+    color: #147aa8;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(20,122,168,.30);
+}
+
+.listing-links a:hover {
+    background: rgba(20,122,168,.10);
+}
+.domain-intro-card {
+    margin: 32px 26px 24px;
+    background: #f0f4f4;
+    border-radius: 18px;
+    padding: 20px 24px;
+    border: 1px solid rgba(16,16,16,.08);
+}
+
+</style>
+
+<nav>
+    <div class="nav-logo">
+        <img src="Transparent Logo.png">
+    </div>
+    <ul class="nav-links">
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Directory.html">Directory</a></li>
+        <li><a href="Contact.html">Get Involved</a></li>
+        <li><a href="Food.html">Food & Hospitality</a></li>
+        <li><a href="Beauty.html">Beauty & Care</a></li>
+        <li><a href="Retail.html">Retail & Makers</a></li>
+        <li><a href="Creative.html">Creative Economy</a></li>
+        <li><a href="Professional.html">Professional Services</a></li>
+        <li><a href="Wellness.html">Wellness & Healing</a></li>
+        <li><a href="Education.html"class="active">Education & Community</a></li>
+
+    </ul>
+</nav>
+
+<main>
+    <div class="card">
+
+        <div class="leftcolumn">
+<div class="domain-intro-card">
+    <h2>Education & Community Anchors</h2>
+    <h3>Schools, faith spaces, organizers, and institutions that hold continuity, memory, and connection.</h3>
+    <p>Explore educators and community anchors in this domain. Know someone who should be listed here? <a href="Contact.html" style="color: #147aa8;">Get involved →</a></p>
+</div>
+
+</div>
+        <div class="rightcolumn" style="display: block; padding: 0;">
+
+            <div class="listings-grid">
+
+<div class="listing-card">
+    <img class="listing-logo" src="placeholder-logo.png" alt="Business logo placeholder">
+    <h3>Ancestral Roots Learning Center</h3>
+    <p class="listing-detail"><span>Address:</span> 2900 Martin Luther King Jr Ave SE, Washington, DC 20032</p>
+    <p class="listing-detail"><span>Hours:</span> Mon–Fri 8am–6pm</p>
+    <div class="listing-links">
+        <a href="#">Visit Website</a>
+        <a href="#">Instagram</a>
+    </div>
+</div>
+
+<div class="listing-card">
+    <img class="listing-logo" src="placeholder-logo.png" alt="Business logo placeholder">
+    <h3>Community Bridge Youth Program</h3>
+    <p class="listing-detail"><span>Address:</span> 1600 Bladensburg Rd NE, Washington, DC 20018</p>
+    <p class="listing-detail"><span>Hours:</span> Mon–Fri 2pm–7pm</p>
+    <div class="listing-links">
+        <a href="#">Visit Website</a>
+        <a href="#">Instagram</a>
+    </div>
+</div>
+
+<div class="listing-card">
+    <img class="listing-logo" src="placeholder-logo.png" alt="Business logo placeholder">
+    <h3>Freedom Faith Community Church</h3>
+    <p class="listing-detail"><span>Address:</span> 5800 Marlboro Pike, District Heights, MD 20747</p>
+    <p class="listing-detail"><span>Hours:</span> Sun 8am–2pm, Wed 6pm–8pm</p>
+    <div class="listing-links">
+        <a href="#">Visit Website</a>
+        <a href="#">Instagram</a>
+    </div>
+</div>
+
+<div class="listing-card">
+    <img class="listing-logo" src="placeholder-logo.png" alt="Business logo placeholder">
+    <h3>Next Generation Tutoring</h3>
+    <p class="listing-detail"><span>Address:</span> 7500 Annapolis Rd, Landover Hills, MD 20784</p>
+    <p class="listing-detail"><span>Hours:</span> Mon–Sat 10am–6pm</p>
+    <div class="listing-links">
+        <a href="#">Visit Website</a>
+        <a href="#">Instagram</a>
+    </div>
+</div>
+
+<div class="listing-card">
+    <img class="listing-logo" src="placeholder-logo.png" alt="Business logo placeholder">
+    <h3>Village Keepers Collective</h3>
+    <p class="listing-detail"><span>Address:</span> 3400 East West Hwy, Hyattsville, MD 20782</p>
+    <p class="listing-detail"><span>Hours:</span> By appointment</p>
+    <div class="listing-links">
+        <a href="#">Visit Website</a>
+        <a href="#">Instagram</a>
+    </div>
+</div>

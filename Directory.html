@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset= "UTF-8"/>
+        <style>
+nav {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(234,127,51,.90),rgba(36,89,69,.96), rgba(20,122,168,.90),#147aa8);
+    padding: 14px 32px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+.nav-logo {
+    display: block;
+    margin: 0 auto 12px;
+    text-align: center;
+  }
+.nav-logo img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    background: transparent;
+  }
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+.nav-links a {
+    color: #101010;
+    text-decoration: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    padding: 7px 14px;
+    border-radius: 999px;
+    transition: background 0.2s;
+  }
+.nav-links a:hover {
+    background: rgba(20, 122, 168, .22);
+    color: #147aa8;
+  }
+.nav-links a.active {
+    color:white
+}
+
+.domain-header {
+    padding: 32px 26px 0;
+    grid-column: 1 / -1;
+}
+
+.domain-header h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: #101010;
+    margin-bottom: 8px;
+}
+
+.domain-header p {
+    color: #53616a;
+    line-height: 1.65;
+    margin-bottom: 24px;
+}
+
+.listings-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 26px 32px;
+}
+
+.listing-card {
+    background: #fffdfa;
+    border-radius: 18px;
+    border: 1px solid rgba(16,16,16,.10);
+    padding: 20px;
+    transition: box-shadow 0.2s;
+}
+
+.listing-card:hover {
+    box-shadow: 0 8px 24px rgba(16,16,16,.10);
+}
+
+.listing-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    object-fit: contain;
+    background: #f0f0f0;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.listing-card h3 {
+    font-family: Georgia, serif;
+    font-size: 1.05rem;
+    color: #101010;
+    margin-bottom: 10px;
+}
+
+.listing-detail {
+    font-size: .85rem;
+    color: #53616a;
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+
+.listing-detail span {
+    font-weight: 600;
+    color: #101010;
+}
+
+.listing-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
+.listing-links a {
+    font-size: .78rem;
+    font-weight: 700;
+    color: #147aa8;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(20,122,168,.30);
+}
+
+.listing-links a:hover {
+    background: rgba(20,122,168,.10);
+}
+.domain-intro-card {
+    margin: 32px 26px 24px;
+    background: #f0f4f4;
+    border-radius: 18px;
+    padding: 20px 24px;
+    border: 1px solid rgba(16,16,16,.08);
+}
+
+.directory-index {
+    padding: 0 26px 32px;
+}
+
+.alpha-section {
+    margin-bottom: 24px;
+}
+
+.alpha-letter {
+    font-family: Georgia, serif;
+    font-size: 1.4rem;
+    color: #147aa8;
+    border-bottom: 2px solid rgba(20,122,168,.20);
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+}
+
+.alpha-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 6px;
+}
+
+.alpha-section ul li {
+    font-size: .92rem;
+    color: #101010;
+    padding: 8px 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alpha-section ul li:hover {
+    background: rgba(20,122,168,.06);
+}
+
+.alpha-section ul li span {
+    font-size: .78rem;
+    color: #53616a;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+.alpha-section ul li a {
+    color: #101010;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.alpha-section ul li a:hover { color: #147aa8; }
+</style>
+
+<nav>
+    <div class="nav-logo">
+        <img src="Transparent Logo.png">
+    </div>
+    <ul class="nav-links">
+  <li><a href="Index.html">Home</a></li>
+        <li><a href="Directory.html"class="active">Directory</a></li>
+        <li><a href="Contact.html">Get Involved</a></li>
+        <li><a href="Food.html">Food & Hospitality</a></li>
+        <li><a href="Beauty.html">Beauty & Care</a></li>
+        <li><a href="Retail.html">Retail & Makers</a></li>
+        <li><a href="Creative.html">Creative Economy</a></li>
+        <li><a href="Professional.html">Professional Services</a></li>
+        <li><a href="Wellness.html">Wellness & Healing</a></li>
+        <li><a href="Education.html">Education & Community</a></li>
+    </ul>
+</nav>
+
+<div class="domain-intro-card">
+    <h1> WE OUTSIDE </h1>
+    <h3>All ecosystem members listed alphabetically across all seven domains.</h3>
+    <p>Know someone who should be listed here? <a href="Contact.html" style="color: #147aa8;">Get involved →</a></p>
+</div>
+
+<div class="directory-index">
+
+    <div class="alpha-section">
+        <p class="alpha-letter">A</p>
+        <ul>
+            <li><a href="Retail.html">Afro Urban Threads</a><span>Retail & Makers</span></li>
+            <li><a href="Education.html">Ancestral Roots Learning Center</a><span>Education & Community</span></li>
+            <li><a href="Professional.html">Ascend Financial Advisors</a><span>Professional Services</span></li>
+        </ul>
+    </div>
+
+    <div class="alpha-section">
+        <p class="alpha-letter">B</p>
+        <ul>
+            <li><a href="Creative.html">Black Frame Films</a><span>Creative Economy</span></li>
+            <li><a href="Professional.html">Blueprint Business Coaching</a><span>Professional Services</span></li>
+        </ul>
+    </div>
+
+    <div class="alpha-section">
+        <p class="alpha-letter">C</p>
+        <ul>
+            <li><a href="Education.html">Community Bridge Youth Program</a><span>Education & Community</span></li>
+            <li><a href="Food.html">Community Table PG</a><span>Food & Hospitality</span></li>
+            <li><a href="Beauty.html">Crown & Glory Salon</a><span>Beauty & Personal Care</span></li>
+        </ul>
+    </div>
+
+    <div class="alpha-section">
+        <p class="alpha-letter">E</p>
+        <ul>
+            <li><a href="Professional.html">Elevate Realty Group</a><span>Professional Services</span></li>
+        </ul>
+    </div>
+
+    <div class="alpha-section">
+        <p class="alpha-letter">F</p>
+        <ul>
+            <li><a href="Education.html">Freedom Faith Community Church</a><span>Education & Community</span></li>
+        </ul>
+    </div>
+
+    <div class="alpha-section">
+        <p class="alpha-letter">G</p>
+        <ul>
+            <li><a href="Food.html">The Gathering Spot DMV</a><span>Food & Hospitality</span></li>
+            <li><a href="Food.html">Golden Spoon Soul Food</a><span>Food & Hospitality</span></li>
+            <li><a href="Professional.html">Groundwork Consulting Co.</a><span>Professional Services</span></li>
+        </ul>
+    </div>
+
+    <div class="alpha-section">
+        <p class="alpha-letter">I</p>
+        <ul>
+            <li><a href="Creative.html">Inkwell Design Studio</a><span>Creative Economy</span></li>
+        </ul>
+    </div>
+
+    <div class="alpha-section">
+        <p class="alpha-letter">L</p>
+        <ul>
+            <li><a href="Professional.html">Legacy Law Group</a><span>Professional Services</span></li>
+        </ul>
+    </div>
+
+    <div class="alpha-section">
+        <p class="alpha-letter">M</p>
+        <ul>
+            <li><a href="Retail.html">Made by Melanin Market</a><span>Retail & Makers</span></li>
+            <li><a href="Beauty.html">Melanin & Glow Skincare</a><span>Beauty & Personal Care</span></li>
+            <li><a href="Creative.html">Mural Collective PG</a><span>Creative Economy</span></li>
+        </ul>
+    </div>
+
+    <div class="alpha-section">
+        <p class="alpha-letter">N</p>
+        <ul>
+            <li><a href="Education.html">Next Generation Tutoring</a><span>Education & Community</span></li>
+            <li><a href="Food.html">Nourish Kitchen & Bar</a><span>Food & Hospitality</span></li>
+        </ul>
+    </div>
+
+    <div class="alpha-section">
+        <p class="alpha-letter">R</p>
+        <ul>
+            <li><a href="Wellness.html">Restore Wellness Studio</a><span>Wellness & Healing</span></li>
+            <li><a href="Food.html">Rooted Catering Co.</a><span>Food & Hospitality</span></li>
+            <li><a href="Retail.html">Rooted Goods Co.</a><span>Retail & Makers</span></li>
+            <li><a href="Wellness.html">Rooted Mind Therapy</a><span>Wellness & Healing</span></li>
+            <li><a href="Beauty.html">Roots Beauty Supply</a><span>Beauty & Personal Care</span></li>
+        </ul>
+    </div>
+
+    <div class="alpha-section">
+        <p class="alpha-letter">S</p>
+        <ul>
+            <li><a href="Wellness.html">Sacred Hands Massage</a><span>Wellness & Healing</span></li>
+            <li><a href="Retail.html">Sankofa Boutique</a><span>Retail & Makers</span></li>
+            <li><a href="Beauty.html">Serenity Nail Studio</a><span>Beauty & Personal Care</span></li>
+            <li><a href="Wellness.html">Still Waters Meditation</a><span>Wellness & Healing</span></li>
+        </ul>
+    </div>
+
+    <div class="alpha-section">
+        <p class="alpha-letter">T</p>
+        <ul>
+            <li><a href="Retail.html">The Black Owned Bookshop</a><span>Retail & Makers</span></li>
+            <li><a href="Beauty.html">The Fade Room Barbershop</a><span>Beauty & Personal Care</span></li>
+            <li><a href="Creative.html">The Sound Room DC</a><span>Creative Economy</span></li>
+        </ul>
+    </div>
+
+    <div class="alpha-section">
+        <p class="alpha-letter">V</p>
+        <ul>
+            <li><a href="Wellness.html">Village Holistic Health</a><span>Wellness & Healing</span></li>
+            <li><a href="Education.html">Village Keepers Collective</a><span>Education & Community</span></li>
+            <li><a href="Creative.html">Visionary Lens Photography</a><span>Creative Economy</span></li>
+        </ul>
+    </div>
+
+</div>
